@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXAM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="input-container">
+        <input type="text" placeholder="Type Food  Name">
+        <button id="search-btn">Search</button>
+    </div>
+
+    <div id="results">
+        <p>input should not be empty</p>
+    </div>
+
+    <script id="recipes-template" type="text/x-handlebars">
+        {{#each recipes}}
+        <div class = "recipe">
+            <a href="{{href}}">{{title}}</a>
+            <ul>
+                {{#each this.ingredients}}
+                <li class="li">'{{this}}'</li>
+                {{/each}}
+            </ul>
+            <img class="img" src="{{thumbnail}}" alt="">
+        </div>
+        {{/each}}
+    </script>
+
+
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="./handlebars/dist/handlebars.js"></script>
+    <script src="Render.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

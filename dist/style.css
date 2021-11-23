@@ -1,0 +1,49 @@
+#input-container{
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+}
+
+#input-container > input{
+    padding: 10px;
+    border: 1px solid hsl(199, 82%, 40%);
+}
+
+#input-container button{
+    background-color: hsl(199, 82%, 40%);
+    margin-left: 1px;
+    margin-right: 1px;
+    color: white;
+    font-size: 1.7vw;
+}
+
+#results{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    border: 1px solid hsl(199, 82%, 40%);
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+    #results {
+        grid-template-columns:  1fr;
+    }
+  }
+
+#results > div {
+    border: 1px solid hsl(199, 82%, 40%);
+} 
+
+#results > p {
+    display: none; 
+    color: red;
+}
+
+.li{
+    display : inline-block;
+}
+
+.img{
+    max-width:40%;
+}
